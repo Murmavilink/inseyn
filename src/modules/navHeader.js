@@ -13,3 +13,21 @@ export const accordionTel = () => {
     });
 
 };
+
+
+export const menu = () => {
+    const menuBtn = document.querySelector('.menu__icon');
+    const popupMenu = document.querySelector('.popup-menu');
+    const popupContentMenu = document.querySelector('.popup-dialog-menu');
+    const closeBtn = popupMenu.querySelector('.close-menu');
+
+
+    menuBtn.addEventListener('click', () => {
+        if(!popupContentMenu.style.transform) {
+            popupContentMenu.style.transform = 'translate3d(0px, 0px, 0px)';
+        }
+    });
+
+
+    closeBtn.addEventListener('click', () => popupContentMenu.style = '');
+};
